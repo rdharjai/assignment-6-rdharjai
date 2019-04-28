@@ -1,0 +1,85 @@
+<div class="events">
+  <div class="events__container">
+    <div class="event-info__container">
+      <div class="event-info__header">
+        <div class="event-info__banner">
+          <img class="event-banner" src="assets/events/{{ event.thumbnailImage }}" alt="event.name" />
+        </div>
+      </div>
+
+      <div class="event-info__body">
+        <div class="event-info__body-content">
+          <div class="event-info__body-content__label">Description</div>
+          <span [innerHTML]="event.description"></span>
+        </div>
+
+        <div class="event-info__body-siderail">
+
+          <div class="event-info__body-siderail__section">
+            <div class="event-info__body-siderail__section-title">Date and Time</div>
+            <div class="event-info__body-siderail__section-info">
+              {{ event.startDate | date:'EEEE, MMMM d, y' }}<br />
+              {{ event.endDate | date:'EEEE, MMMM d, y' }}
+            </div>
+          </div>
+
+          <div class="event-info__body-siderail__section">
+            <div class="event-info__body-siderail__section-title">Location</div>
+            <div class="event-info__body-siderail__section-info">
+              {{ event.location.address1 }}<br />
+              {{ event.location.address2 }}<br />
+              {{ event.location.city }} {{ event.location.state }} {{ event.location.zip }}<br />
+              {{ event.location.location }}
+            </div>
+          </div>
+
+          <div class="event-info__body-siderail__section">
+            <div class="event-info__body-siderail__section-title">Price</div>
+            <div class="event-info__body-siderail__section-info">
+              <!-- {{#if event.lowPrice}} -->
+              ${{ event.lowPrice }}
+              <!-- {{/if}} -->
+              <!-- {{#if event.highPrice}} -->
+              &nbsp;&mdash;&nbsp;${{ event.highPrice }}
+              <!-- {{/if}} -->
+            </div>
+          </div>
+
+          <div class="event-info__body-siderail__section">
+            <div class="event-info__body-siderail__section-title">Refund Policy</div>
+            <div class="event-info__body-siderail__section-info">
+              {{ event.refundPolicy }}
+            </div>
+          </div>
+
+          <div class="event-info__body-siderail__section">
+            <div class="event-info__body-siderail__section-title">Contact</div>
+            <div class="event-info__body-siderail__section-info">
+              <!-- {{#if event.contact.name}} -->
+              {{ event.contact.name }}
+              <!-- {{/if}} -->
+              <!-- {{#if event.contact.phone}} -->
+              <br /><i class="fas fa-phone"></i>
+              {{ event.contact.phone }}
+              <!-- {{/if}} -->
+              <!-- {{#if event.contact.email}} -->
+              <br /><i class="fas fa-envelope"></i>
+              <a href="mailto:{{ event.contact.email }}">Email us</a>
+              <!-- {{/if}} -->
+              <!-- {{#if event.contact.website}} -->
+              <br /><i class="fas fa-desktop"></i>
+              <a href="{{ event.contact.website }}" target="_blank">Visit our website</a>
+              <!-- {{/if}} -->
+              <!-- {{#if event.contact.facebook}} -->
+              <br /><i class="fab fa-facebook-f"></i>
+              <a href="{{ event.contact.facebook }}" target="_blank">Visit us on Facebook</a>
+              <!-- {{/if}} -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

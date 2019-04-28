@@ -1,0 +1,16 @@
+<ng-container *ngFor="let event of eventsList">
+  <a *ngIf="event.starEvent" href="/eventdetail/{{event._id}}">
+    <div class="star-event__container">
+      <div class="star-event__banner">
+        <img class="star-event__banner-image" src="assets/events/{{ event.bannerImage }}" alt="{{ event.name }}" />
+      </div>
+      <div class="star-event__banner-overlay">
+        <div class="star-event__banner-overlay-content">
+          <span class="title-content">{{ event.name }}</span>
+          <span>{{ event.startDate | date:'EEEE, MMMM d, y'}}</span>
+          <span>{{ event.location.address1 }} {{ event.location.city }} {{ event.location.state }}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</ng-container>

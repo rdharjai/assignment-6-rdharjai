@@ -1,0 +1,20 @@
+<ng-container *ngIf="listType === 'home'">
+    <app-starevent></app-starevent>
+</ng-container>
+
+<div class="events">
+    <div class="events__container">
+        <div class="events__list-container">
+            <ul class="events__list">
+                <ng-container *ngFor="let event of eventsList">
+                    <ng-container *ngIf="listType === 'home' && event.showOnHomepage">
+                        <app-eventitem [event]="event"></app-eventitem>
+                    </ng-container>
+                    <ng-container *ngIf="listType === 'allevents'">
+                            <app-eventitem [event]="event"></app-eventitem>
+                        </ng-container>                    
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>

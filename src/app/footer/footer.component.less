@@ -1,0 +1,25 @@
+@import '../../styles-variables.less';
+
+.footer {
+    border: @border-outter;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1em;    
+    background-color: #ccc;
+    .footer__container {
+        border: @border-inner;
+        max-width: @max-content-width;
+        width: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: 1em 0em;
+        footer {
+            .copyright {
+                font-size: 0.8em;
+                line-height: 1em;
+            }
+        }
+    }
+}

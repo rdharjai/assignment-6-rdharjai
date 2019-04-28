@@ -1,0 +1,31 @@
+<li class="events__list-item" id="event{{this._id}}">
+  <div class="events__list-item__details">
+    <div class="event_image">
+      <a href="/eventdetail/{{event._id}}" class="event_link">
+        <img src="assets/events/{{ event.thumbnailImage }}" alt="{{ event.name }}" />
+      </a>
+    </div>
+    <div class="event_info">
+      <div class="event_info__name">{{ event.name }}</div>
+      <div class="event_info__date">{{ event.startDate | date:'EEEE, MMMM d, y'}}</div>
+      <div class="event_info__location">{{ event.location.address1 }} {{ event.location.city }}
+        {{ event.location.state }}</div>
+      <div class="event_info__price">Price: ${{ event.lowPrice }} &mdash; ${{ event.highPrice }}</div>
+      <div class="event_info__posted">Posted by: {{ event.createdBy }} </div>
+      <!-- {{#if ../showActionBar}}
+      <div class="event_actions">
+        <ul class="event_actions__list">
+          <li class="event_actions__item"><a href="/events/edit/{{this._id}}">Edit</a></li>
+          <li class="event_actions__item"><a href="#event{{this._id}}"
+              onclick="deleteConfirm('{{this._id}}')">Delete</a></li>
+        </ul>
+      </div>
+      <div id="{{this._id}}" class="event_actions__confirm-delete">
+        <span class="confirm-msg">Confirm delete:</span>
+        &nbsp;&nbsp;<a href="/events/delete/{{this._id}}">Yes</a>
+        &nbsp;&nbsp;<a href="#event{{this._id}}" onclick="deleteCancel('{{this._id}}')">No</a>
+      </div>
+      {{/if}} -->
+    </div>
+  </div>
+</li>
