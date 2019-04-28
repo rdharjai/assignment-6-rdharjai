@@ -1,121 +1,121 @@
-@max-content-width: 1200px;
-@logo-color: #e75f25;
-@button-hover-color: #e75f25;
-@button-primary-color: #337ab7;
-@link-color: #337ab7;
-@link-hover-color: #e75f25;
-@section-title-color: #e75f25;
-@icon-color: #000000;
-@alert-danger-background: #f3d8da;
-@alert-danger-color: #692326;
-@alert-success-background: #d9ecdb;
-@alert-success-color:  #2a552a;
-@required-field-icon-color: #e75f25;
+// @max-content-width: 1200px;
+// @logo-color: #e75f25;
+// @button-hover-color: #e75f25;
+// @button-primary-color: #337ab7;
+// @link-color: #337ab7;
+// @link-hover-color: #e75f25;
+// @section-title-color: #e75f25;
+// @icon-color: #000000;
+// @alert-danger-background: #f3d8da;
+// @alert-danger-color: #692326;
+// @alert-success-background: #d9ecdb;
+// @alert-success-color:  #2a552a;
+// @required-field-icon-color: #e75f25;
 
-// @border-outter: solid 1px red;
-// @border-inner: solid 1px green;
-@border-outter: none;
-@border-inner: none;
+// // @border-outter: solid 1px red;
+// // @border-inner: solid 1px green;
+// @border-outter: none;
+// @border-inner: none;
 
-.header {
-    border: @border-outter;
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    width: 100%;
-    font-size: 1em;
-    .header__container {
-        border: @border-inner;
-        max-width: @max-content-width;
-        width: 100%;
-        display: flex;
-        flex: 1;
-        flex-direction: column;        
-        header {
-            // border: solid 1px red;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            flex: 1;
-            padding: 1em 0em;
-            @media screen and (max-width: 768px) {
-                padding: 0.3em 0;                
-            }             
-            .header__logo {
-                // border: solid 1px green;
-                display: flex;
-                justify-content: flex-start;
-                flex: 1;
-                font-family: 'Righteous', cursive;
-                font-size: 3em;
-                line-height: 1em;
-                font-weight: 400;
-                color: @logo-color;
-                @media screen and (max-width: 768px) {
-                    margin-left: 0.1em;               
-                }                
-                a {
-                    text-decoration: none;
-                    color: @logo-color;
-                    font-weight: 400;
-                }
-                a:visited {
-                    text-decoration: none;
-                    color: @logo-color;
-                    font-weight: 400;
-                }
-                a:anchor {
-                    text-decoration: none;
-                    color: @logo-color;
-                    font-weight: 400;
-                }
-                a:hover {
-                    text-decoration: none;
-                    color: @logo-color;
-                    font-weight: 400;
-                }                                                
-            }
-            .header__links {
-                // border: solid 1px blue;
-                display: flex;
-                flex: 4;
-                flex-direction: row;
-                justify-content: flex-end;
-                @media screen and (max-width: 768px) {
-                    display: none;                
-                }
-                @media screen and (max-width: 1024px) {
-                    display: none;              
-                }                
-                ul {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-                    li {
-                        padding-left: 1em;
-                        font-size: 1em;
-                        letter-spacing: 0.1em;
-                    }
-                }
-            }
-            .mmenu__container {
-                // border: solid 1px blue;
-                display: none;
-                margin-right: 1em;
-                @media screen and (max-width: 768px) {
-                    display: block;                
-                }
-                @media screen and (max-width: 1024px) {
-                    display: block;              
-                }
-                .mmenu__list {
-                    background-color: transparent;
-                }                 
-            }
-        }
-    }
-}
+// .header {
+//     border: @border-outter;
+//     display: flex;
+//     justify-content: center;
+//     font-weight: 400;
+//     width: 100%;
+//     font-size: 1em;
+//     .header__container {
+//         border: @border-inner;
+//         max-width: @max-content-width;
+//         width: 100%;
+//         display: flex;
+//         flex: 1;
+//         flex-direction: column;        
+//         header {
+//             // border: solid 1px red;
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: flex-start;
+//             flex: 1;
+//             padding: 1em 0em;
+//             @media screen and (max-width: 768px) {
+//                 padding: 0.3em 0;                
+//             }             
+//             .header__logo {
+//                 // border: solid 1px green;
+//                 display: flex;
+//                 justify-content: flex-start;
+//                 flex: 1;
+//                 font-family: 'Righteous', cursive;
+//                 font-size: 3em;
+//                 line-height: 1em;
+//                 font-weight: 400;
+//                 color: @logo-color;
+//                 @media screen and (max-width: 768px) {
+//                     margin-left: 0.1em;               
+//                 }                
+//                 a {
+//                     text-decoration: none;
+//                     color: @logo-color;
+//                     font-weight: 400;
+//                 }
+//                 a:visited {
+//                     text-decoration: none;
+//                     color: @logo-color;
+//                     font-weight: 400;
+//                 }
+//                 a:anchor {
+//                     text-decoration: none;
+//                     color: @logo-color;
+//                     font-weight: 400;
+//                 }
+//                 a:hover {
+//                     text-decoration: none;
+//                     color: @logo-color;
+//                     font-weight: 400;
+//                 }                                                
+//             }
+//             .header__links {
+//                 // border: solid 1px blue;
+//                 display: flex;
+//                 flex: 4;
+//                 flex-direction: row;
+//                 justify-content: flex-end;
+//                 @media screen and (max-width: 768px) {
+//                     display: none;                
+//                 }
+//                 @media screen and (max-width: 1024px) {
+//                     display: none;              
+//                 }                
+//                 ul {
+//                     display: flex;
+//                     flex-direction: row;
+//                     justify-content: center;
+//                     align-items: center;
+//                     margin: 0;
+//                     padding: 0;
+//                     list-style: none;
+//                     li {
+//                         padding-left: 1em;
+//                         font-size: 1em;
+//                         letter-spacing: 0.1em;
+//                     }
+//                 }
+//             }
+//             .mmenu__container {
+//                 // border: solid 1px blue;
+//                 display: none;
+//                 margin-right: 1em;
+//                 @media screen and (max-width: 768px) {
+//                     display: block;                
+//                 }
+//                 @media screen and (max-width: 1024px) {
+//                     display: block;              
+//                 }
+//                 .mmenu__list {
+//                     background-color: transparent;
+//                 }                 
+//             }
+//         }
+//     }
+// }
